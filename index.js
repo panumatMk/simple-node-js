@@ -41,7 +41,7 @@ setInterval(function () {
     var msg = Math.random();
     // console.log("Clients: " + Object.keys(clients) + " <- " + msg);
     for (clientId in clients) {
-        clients[clientId].write("data: " + msg + "\n\n"); // <- Push a message to a single attached client
+        clients[clientId].write(`data: { value: ${msg} } \n\n`); // <- Push a message to a single attached client
     };
 }, 2000);
 
