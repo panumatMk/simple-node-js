@@ -2,7 +2,7 @@ const app = require('express')();
 const cors = require('cors');
 const PORT = process.env.PORT || 3333;
 
-app.use(cors());
+app.options('*', cors())
 
 app.get('/', (req, res) => {
     res.status(200).send('hello world')
